@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>centos7切换国内源</title>
+      <link href="/2022/06/29/centos7%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/"/>
+      <url>/2022/06/29/centos7%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
+      
+        <content type="html"><![CDATA[<p>如果想仅使用新设置的国内源，可以先备份原先的源文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># cd /etc/yum.repos.d</span><br><span class="line"># mkdir repo_bak</span><br><span class="line"># mv *.repo repo_bak/</span><br></pre></td></tr></table></figure><p>使用阿里云Yum源（CentOS7):</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># wget -O /etc/yum.repos.d/CentOS7-Aliyun.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"># wget -O /etc/yum.repos.d/epel-7-Aliyun.repo http://mirrors.aliyun.com/repo/epel-7.repo</span><br></pre></td></tr></table></figure><p>更新缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># yum clean all</span><br><span class="line"># yum makecache</span><br><span class="line">#查看源列表</span><br><span class="line"># yum repolist all</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 综合 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
